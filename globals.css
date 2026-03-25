@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 88%;
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 88%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 88%;
+    --primary: 183 100% 50%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 283 97% 54%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 217 100% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 183 100% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: #0a0a0c;
+  }
+}
+
+@layer utilities {
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+  }
+  .neon-glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+  }
+  .neon-glow-purple {
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
+  }
+  .glass-header {
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
